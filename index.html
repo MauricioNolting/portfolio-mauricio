@@ -836,12 +836,18 @@
     .tech-badges { justify-content: center; }
     .nav-links {
       position: fixed;
-      inset: 0;
+      /* Tamaño explícito (no "inset:0"): así sigue cubriendo toda la
+         pantalla aunque la nav tenga backdrop-filter al hacer scroll. */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      z-index: 100;
       flex-direction: column;
       justify-content: center;
       gap: 36px;
-      background: rgba(10, 10, 15, 0.97);
-      backdrop-filter: blur(20px);
+      background: var(--color-bg);
       transform: translateX(100%);
       transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
