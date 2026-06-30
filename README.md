@@ -1,8 +1,8 @@
-# Portfolio — Mauricio
+# WebSites PT
 
-Portfolio web personal de Mauricio, desenvolvedor web freelancer baseado no Porto, Portugal.
+Site oficial da **WebSites PT** — estúdio de criação de sites profissionais baseado no Porto, Portugal.
 
-Site profissional de página única (HTML, CSS e JavaScript puro), com:
+Site de página única (HTML, CSS e JavaScript puro), com:
 
 - Fundo de partículas interativas
 - Efeito *scramble* no nome
