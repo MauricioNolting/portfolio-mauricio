@@ -620,6 +620,71 @@
   }
   .mockup-mamma .brand b { color: #C7472F; font-weight: 700; }
 
+  .mockup-wealth {
+    background: radial-gradient(circle at 72% 18%, #1b1733, #0A0A0F 70%);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 26px;
+    gap: 14px;
+  }
+  .mockup-wealth .wt-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+  }
+  .mockup-wealth .wt-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+  .mockup-wealth .wt-value {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: #fff;
+    line-height: 1;
+  }
+  .mockup-wealth .wt-pill {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.66rem;
+    color: #2ecc71;
+    background: rgba(46, 204, 113, 0.12);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    padding: 3px 9px;
+    border-radius: 100px;
+  }
+  .mockup-wealth .wt-donut {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    background: conic-gradient(#2ecc71 0 12%, #6C63FF 12% 25%, #F5A623 25% 100%);
+  }
+  .mockup-wealth .wt-donut::before {
+    content: "";
+    position: absolute;
+    inset: 17px;
+    border-radius: 50%;
+    background: #100e1c;
+  }
+  .mockup-wealth .wt-donut span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
   /* =================================================================
      SOBRE MIM
   ================================================================== */
@@ -953,7 +1018,7 @@
           <h2 class="section-title" data-i18n="projects.title">Projetos <span class="gradient-text">realizados</span></h2>
         </div>
         <div class="counter-box reveal">
-          <div class="counter-num" id="counter" data-target="2">0</div>
+          <div class="counter-num" id="counter" data-target="3">0</div>
           <div class="counter-label" data-i18n="projects.counter">projetos entregues</div>
         </div>
       </div>
@@ -1012,6 +1077,39 @@
               <span>PostgreSQL</span><span>i18n</span><span>Netlify</span>
             </div>
             <a href="https://pizzeriamammabella.netlify.app/" class="card-link" target="_blank" rel="noopener" aria-label="Mamma Bella">
+              <span data-i18n="card.link">Ver projeto</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJETO 3: WEALTHTRACK -->
+        <article class="card" style="--card-accent:#6C63FF">
+          <div class="card-media">
+            <div class="mockup mockup-wealth">
+              <div class="wt-info">
+                <span class="wt-label">Património</span>
+                <span class="wt-value">18.707,88 €</span>
+                <span class="wt-pill">▲ +13,9%</span>
+              </div>
+              <div class="wt-donut"><span>Ativos</span></div>
+            </div>
+            <span class="card-badge" data-i18n="card3.badge">Finanças · App</span>
+            <span class="card-year">2026</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title" data-i18n="card3.title">WealthTrack — Gestão de Património</h3>
+            <p class="card-desc" data-i18n="card3.desc">
+              Aplicação para registar e visualizar o teu património líquido mês a mês. Composição
+              de ativos por categoria (líquido, investimentos, imóveis), acompanhamento de dívidas,
+              gráficos interativos, suporte multi-moeda e histórico de evolução. Construída com
+              Expo e Firebase.
+            </p>
+            <div class="stack">
+              <span>Expo</span><span>React Native</span><span>TypeScript</span>
+              <span>Firebase</span><span>Firestore</span><span>i18n</span>
+            </div>
+            <a href="https://misactivoseneltiempo.netlify.app/dashboard" class="card-link" target="_blank" rel="noopener" aria-label="WealthTrack">
               <span data-i18n="card.link">Ver projeto</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -1167,6 +1265,9 @@
         "card2.badge": "Restaurante · Multilingue",
         "card2.title": "Mamma Bella — Pizzeria Italiana",
         "card2.desc": "Site completo para pizzaria italiana com suporte multilingue em 12 idiomas, menu digital interativo por categorias, design inspirado na tradição italiana com tipografia elegante e paleta verde escuro e creme. Otimizado para conversão e experiência do utilizador.",
+        "card3.badge": "Finanças · App",
+        "card3.title": "WealthTrack — Gestão de Património",
+        "card3.desc": "Aplicação para registar e visualizar o teu património líquido mês a mês. Composição de ativos por categoria (líquido, investimentos, imóveis), acompanhamento de dívidas, gráficos interativos, suporte multi-moeda e histórico de evolução. Construída com Expo e Firebase.",
         "card.link": "Ver projeto",
         "about.label": "// Sobre mim",
         "about.title": 'Olá, sou o <span class="gradient-text">Mauricio</span>',
@@ -1198,6 +1299,9 @@
         "card2.badge": "Restaurante · Multilingüe",
         "card2.title": "Mamma Bella — Pizzería Italiana",
         "card2.desc": "Sitio completo para pizzería italiana con soporte multilingüe en 12 idiomas, menú digital interactivo por categorías, diseño inspirado en la tradición italiana con tipografía elegante y paleta verde oscuro y crema. Optimizado para conversión y experiencia de usuario.",
+        "card3.badge": "Finanzas · App",
+        "card3.title": "WealthTrack — Gestión de Patrimonio",
+        "card3.desc": "Aplicación para registrar y visualizar tu patrimonio neto mes a mes. Composición de activos por categoría (líquido, inversiones, inmuebles), seguimiento de deudas, gráficos interactivos, soporte multimoneda e historial de evolución. Construida con Expo y Firebase.",
         "card.link": "Ver proyecto",
         "about.label": "// Sobre mí",
         "about.title": 'Hola, soy <span class="gradient-text">Mauricio</span>',
@@ -1229,6 +1333,9 @@
         "card2.badge": "Restaurant · Multilingual",
         "card2.title": "Mamma Bella — Italian Pizzeria",
         "card2.desc": "Complete website for an Italian pizzeria with multilingual support in 12 languages, an interactive digital menu by category, and a design inspired by Italian tradition with elegant typography and a dark green and cream palette. Optimized for conversion and user experience.",
+        "card3.badge": "Finance · App",
+        "card3.title": "WealthTrack — Net Worth Tracker",
+        "card3.desc": "App to track and visualize your net worth month by month. Asset composition by category (cash, investments, real estate), debt tracking, interactive charts, multi-currency support and an evolution history. Built with Expo and Firebase.",
         "card.link": "View project",
         "about.label": "// About me",
         "about.title": 'Hi, I\'m <span class="gradient-text">Mauricio</span>',
