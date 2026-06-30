@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- ============ FAVICON ============ -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
   <!-- ============ SEO ============ -->
   <title>WebSites PT | Criação de Sites no Porto</title>
   <meta name="description" content="WebSites PT — criação de sites profissionais no Porto, Portugal. Sites para negócios locais e plataformas B2B à medida.">
@@ -835,13 +839,23 @@
   }
   .contact-wa .contact-icon { color: #25D366; }
 
+  .contact-instagram .contact-icon {
+    color: #E1306C;
+    background: linear-gradient(135deg, rgba(225,48,108,0.15), rgba(252,176,69,0.15));
+  }
+  .contact-instagram:hover {
+    transform: translateY(-6px);
+    border-color: #E1306C;
+    box-shadow: 0 16px 40px rgba(225, 48, 108, 0.25);
+  }
+  .contact-instagram:hover .contact-icon {
+    transform: scale(1.12);
+    background: linear-gradient(135deg, rgba(225, 48, 108, 0.3), rgba(252, 176, 69, 0.3));
+    box-shadow: 0 0 26px rgba(225, 48, 108, 0.45);
+  }
   .contact-instagram.disabled {
     opacity: 0.5;
     pointer-events: none;
-    position: relative;
-  }
-  .contact-instagram .contact-icon {
-    background: linear-gradient(135deg, rgba(225,48,108,0.15), rgba(252,176,69,0.15));
   }
 
   /* =================================================================
@@ -1184,13 +1198,15 @@
           </a>
 
           <!-- C) INSTAGRAM -->
-          <!-- AGREGAR INSTAGRAM HANDLE AQUÍ cuando esté disponible: cambiar href="#" por href="https://instagram.com/[handle]" y quitar la clase disabled -->
-          <a class="contact-item contact-instagram disabled" href="#" aria-label="Instagram" data-i18n-title="ig.title" title="Em breve">
+          <a class="contact-item contact-instagram"
+             href="https://www.instagram.com/websitespt/"
+             target="_blank" rel="noopener"
+             aria-label="Instagram da WebSites PT (abre em nova janela)">
             <span class="contact-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </span>
             <span class="contact-label">Instagram</span>
-            <span class="contact-value" data-i18n="ig.value">@em_breve</span>
+            <span class="contact-value" data-i18n="ig.value">@websitespt</span>
           </a>
 
         </div>
@@ -1275,8 +1291,8 @@
         "contact.label": "// Contacto",
         "contact.title": 'Vamos <span class="gradient-text">falar?</span>',
         "contact.sub": "Abertos a novos projetos e colaborações",
-        "ig.title": "Em breve",
-        "ig.value": "@em_breve",
+        "ig.title": "Instagram",
+        "ig.value": "@websitespt",
         "footer.text": "© 2026 WebSites PT · Desenvolvido com ☕ no Porto, Portugal",
         "footer.about": "Sobre"
       },
@@ -1309,8 +1325,8 @@
         "contact.label": "// Contacto",
         "contact.title": '¿<span class="gradient-text">Hablamos?</span>',
         "contact.sub": "Abiertos a nuevos proyectos y colaboraciones",
-        "ig.title": "Próximamente",
-        "ig.value": "@proximamente",
+        "ig.title": "Instagram",
+        "ig.value": "@websitespt",
         "footer.text": "© 2026 WebSites PT · Hecho con ☕ en Porto, Portugal",
         "footer.about": "Sobre"
       },
@@ -1343,8 +1359,8 @@
         "contact.label": "// Contact",
         "contact.title": "Let's <span class=\"gradient-text\">talk?</span>",
         "contact.sub": "Open to new projects and collaborations",
-        "ig.title": "Coming soon",
-        "ig.value": "@coming_soon",
+        "ig.title": "Instagram",
+        "ig.value": "@websitespt",
         "footer.text": "© 2026 WebSites PT · Made with ☕ in Porto, Portugal",
         "footer.about": "About"
       }
@@ -1657,12 +1673,9 @@
   </script>
 
   <!-- =================================================================
-       ✅ Portfolio listo (PT / ES / EN). Instagram pendiente de agregar
-       en la línea 1079 (bloque <a class="contact-instagram disabled" href="#" ...>):
-       1) cambiar href="#" por href="https://instagram.com/[handle]"
-       2) quitar la clase "disabled"
-       3) reemplazar el valor "@em_breve" / "@proximamente" / "@coming_soon"
-          en el diccionario i18n (claves "ig.value") por el usuario real.
+       ✅ WebSites PT — site completo (PT / ES / EN), 3 projetos,
+       favicon próprio e contactos ativos (email, WhatsApp e Instagram
+       @websitespt). Atualização automática via GitHub + Netlify.
   ================================================================== -->
 </body>
 </html>
